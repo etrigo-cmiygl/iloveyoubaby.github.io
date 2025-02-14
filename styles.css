@@ -1,0 +1,99 @@
+/* Basic Style */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: red; /* Solid red background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: white;
+    overflow-y: auto; /* Allow scrolling */
+}
+
+.content {
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+button {
+    background-color: lightpink; /* Light pink button */
+    color: white;
+    font-size: 18px;
+    padding: 15px 25px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: pink;
+}
+
+.small-text {
+    font-size: 12px;
+    margin-top: 20px;
+    display: none;
+}
+
+ul {
+    text-align: left;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+#rose {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+#rose span {
+    position: absolute;
+    font-size: 25px;
+    opacity: 0.8;
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    img {
+        max-width: 250px; /* Adjust GIF size for smaller screens */
+    }
+
+    .content {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    ul {
+        font-size: 16px;
+    }
+}
